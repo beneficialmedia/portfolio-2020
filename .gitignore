@@ -5,6 +5,9 @@ node_modules/*
 # Dist
 public/
 
+# VS Code
+.vs/
+
 # Logs
 logs
 *.log
