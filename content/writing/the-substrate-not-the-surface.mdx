@@ -1,0 +1,67 @@
+---
+slug: the-substrate-not-the-surface
+title: The Substrate, Not the Surface
+subtitle: A note on what I mean when I say I work AI-native.
+date: "2026-05-15"
+readMinutes: 6
+accent: "#0f766e"
+description: "AI-native design isn't a feature pinned on top of a familiar UI. It's a substrate underneath the entire practice. A note from inside the Pulumi Design Sandbox, and from rebuilding this site in one evening."
+---
+
+People hear "AI in product design" and picture a chat box bolted to the side of a familiar UI. That's not what I mean.
+
+What I mean is closer to this: the way I work, the way I prototype, the way I collaborate with engineers, the way I make a decision about a single component — all of it has moved. The substrate is different now. The chat box is a surface. The substrate is everything underneath.
+
+### How I got here
+
+When I founded Octuple at Eightfold in 2022, I built it the way you'd build any design system: token architecture, primitive components, motion language, regression testing, Storybook as the contract. It scaled from a fresh repository to ten thousand production touchpoints in eight months. The work was conventional. The tooling around it was conventional. I won an innovation award for the velocity, not for the practice.
+
+The work I do at Pulumi now is the same shape — tokens, primitives, patterns, a public design system in Facet — but the practice underneath has changed. It changed because the things we're designing changed. Pulumi Neo, our agentic AI platform engineer, is not the kind of product you can design from outside the agent loop. You have to design from inside it.
+
+### The Sandbox
+
+Pulumi's design sandbox is an experimental repo I work in to try ideas in code, fast, without the cost of pitching them into the roadmap. It runs on the real stack — real types, real components from Facet, real services. Most of what's in there never ships. The patterns that do, ship into the Cloud console, into Insights, into ESC, into the surfaces around Neo.
+
+The Sandbox is not the work. It's where the work gets figured out before it gets named.
+
+What's surprised me about it is that the Sandbox is the clearest expression of how I think about AI-native design — not because of what's in it, but because of how the work in it happens. Every iteration is a four-step loop: I describe what I want, an agent produces a candidate, I review and reject most of it, and the small fraction that survives becomes a real design proposal against the real platform. The volume goes up. The judgment goes up faster.
+
+### Tonight as evidence
+
+This site is the same loop, played out tonight. The version of this site you're reading was rebuilt from scratch in one evening, ground-up. I directed Claude through scaffolding Next.js 15, porting content out of a dead Gatsby 2 theme, writing the morphing nav, the case studies, the print-optimized résumé route, the design tokens, the accessibility passes.
+
+I didn't write the React. The agent did. But I made every decision about what the React should be. Why we'd reach for Motion versus the View Transitions API. Why the scrollbar shifts when the menu opens and what to do about it. Why a 4.5:1 contrast ratio fails on a dark home accent. Why locking `body { overflow: hidden }` is the wrong primitive and locking `html` is the right one.
+
+I caught the agent putting one of my roles at the wrong start year. I rejected its draft of my bio and replaced it with my own. I demanded screenshots for the case studies that didn't have them. I made it write an essay about my work and then revise it.
+
+That sequence — direct, critique, redirect, validate — is the work. The agent moved the keystrokes. I moved the judgment.
+
+### The new skill set
+
+What this asks of a designer is different than what the previous wave asked. The skills I'm finding load-bearing now:
+
+**Specify in the real stack, not in spec.** Figma is still useful for visual exploration. But specs in 2026 are increasingly written in code, against the real component library, with real data. You describe the behavior; the agent drafts the component; you review the component. The fidelity is real because the component is real.
+
+**Judgment over output.** Agents produce. The constraint isn't volume anymore — it's quality, taste, and rejection. Most of the design value I add now lives in the no's: no, this isn't accessible; no, this conflicts with the system; no, this doesn't ship.
+
+**Read the substrate.** Knowing what an agent can and can't do — and what it does badly that it pretends to do well — is now a load-bearing skill. Agents will confidently write code that will run. The teams that ship are the ones who understand which of those confidently-written lines is wrong.
+
+**Prototype against truth.** Mocked data is a story. Real data is a constraint. The Sandbox runs against the real Pulumi stack so the prototypes break the way the product breaks.
+
+**Hold the line on craft.** AI lowers the cost of producing things that are 80% right. The job is the last 20%. That's where the design lives.
+
+### What this means for product teams
+
+AI-native design isn't a feature pinned to the side of a product. It's a substrate underneath the entire practice.
+
+It shows up in how an agent renders results. It shows up in how the engineer trusts what the agent did. It shows up in the policy approval flow that gates whether the agent gets to ship. It shows up in the design system the agent's output renders into. It shows up in the autonomy slider that lets a platform team set how far Neo can go without checking back.
+
+If your product touches AI, your design practice has to be AI-native — not because it's fashionable, but because the surfaces that aren't are about to feel old, fast.
+
+### Continuity
+
+I came up in a Marine Corps unit in the late 1990s, shooting motion pictures. Sixteen years later I shipped Fresh Paint as the sole UI dev into Windows 8. Six years after that I was leading Octuple at Eightfold. None of those jobs called itself AI-native design. This one does.
+
+The continuity is the same: design and build together, get it under real users, fix what's wrong. The substrate keeps changing. The practice stays.
+
+— Dylan

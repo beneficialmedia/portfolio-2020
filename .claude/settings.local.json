@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm --version)",
+      "Bash(npm --version)",
+      "Bash(which node; ls \"C:\\\\Program Files\\\\nodejs\\\\\" 2>/dev/null | head -5; nvm list 2>/dev/null | head -10; volta list 2>/dev/null | head -5; ls \"C:\\\\Users\\\\$USERNAME\\\\AppData\\\\Local\\\\nvs\\\\\" 2>/dev/null | head -10)",
+      "Read(//c/Program Files/nodejs\" 2>/dev/null | head -5; nvm list 2>/dev/null | head -10; volta list 2>/dev/**)",
+      "WebFetch(domain:github.com)"
+    ]
+  }
+}

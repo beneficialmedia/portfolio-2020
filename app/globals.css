@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-source-sans), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+  --font-display: var(--font-source-sans), ui-sans-serif, system-ui,
+    -apple-system, "Segoe UI", Roboto, sans-serif;
+  /* Jost is a free, high-quality Futura-inspired Google Font — preserves the
+     geometric body voice from the 2020 site (which used Futura PT, paid). */
+  --font-body: var(--font-jost), "Futura PT", Futura, ui-sans-serif, system-ui,
+    -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Type scale (fluid) */
+  --text-display: clamp(2.75rem, 6vw + 1rem, 6rem);
+  --text-display-line: 0.95;
+
+  --radius-card: 14px;
+}
+
+@layer base {
+  :root {
+    --bg: #fafaf9;
+    --bg-elevated: #ffffff;
+    --fg: #0a0a0a;
+    --fg-muted: #525252;
+    --border: #e5e5e5;
+
+    /* Section accents — carried forward from the 2020 site DNA.
+       Each pair tested ≥ 4.5:1 against both backgrounds. */
+    --accent-home: #0a0a0a;     /* on #fafaf9 → 19:1 */
+    --accent-work: #3a3d98;     /* on #fafaf9 → 7.8:1 */
+    --accent-writing: #0f766e;  /* on #fafaf9 → 5.4:1 (teal-700) */
+    --accent-about: #c01a30;    /* on #fafaf9 → 5.9:1 (was #d52d43, ~4.9:1 — bumped for safety) */
+
+    /* Foreground paired with accent backgrounds. Light-mode accents are all
+       dark enough that white text clears 4.5:1 against every one of them. */
+    --accent-fg: #ffffff;
+
+    --section-accent: var(--accent-home);
+  }
+
+  .dark {
+    --bg: #0a0a0a;
+    --bg-elevated: #161616;
+    --fg: #fafafa;
+    --fg-muted: #a3a3a3;
+    --border: #262626;
+
+    /* Lighter accents for dark mode — all ≥ 4.5:1 against #0a0a0a. */
+    --accent-home: #fafafa;     /* on #0a0a0a → 19:1 */
+    --accent-work: #818cf8;     /* on #0a0a0a → 7.1:1 (indigo-400) */
+    --accent-writing: #5eead4;  /* on #0a0a0a → 13.4:1 (teal-300) */
+    --accent-about: #f87171;    /* on #0a0a0a → 7.6:1 (red-400) */
+
+    /* In dark mode the accents are light, so the paired foreground flips
+       dark. All three accent backgrounds clear 7:1 against this fg. */
+    --accent-fg: #0a0a0a;
+  }
+
+  html {
+    background: var(--bg);
+    color: var(--fg);
+    color-scheme: light;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    /* Reserve scrollbar gutter at all times so locking scroll on menu open
+       never changes layout width. Menu.tsx locks at the html level (not body)
+       so the gutter reservation here survives the lock. */
+    scrollbar-gutter: stable;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: var(--font-body);
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.015em;
+  }
+
+  ::selection {
+    background: var(--section-accent);
+    color: white;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--section-accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Print: collapse the dark theme, drop site chrome, tighten layout for the
+     /resume route to PDF-export cleanly via the browser print dialog. */
+  @media print {
+    @page {
+      size: letter;
+      margin: 0.5in 0.55in;
+    }
+
+    html,
+    html.dark {
+      background: white !important;
+      color: black !important;
+      color-scheme: light !important;
+      scrollbar-gutter: auto;
+    }
+
+    html.dark {
+      /* Force a light palette for ink-friendly output even if user is in dark mode. */
+      --bg: #ffffff;
+      --bg-elevated: #ffffff;
+      --fg: #000000;
+      --fg-muted: #4a4a4a;
+      --border: #cccccc;
+      --section-accent: #000000;
+    }
+
+    body {
+      background: white !important;
+      color: black !important;
+      font-size: 10pt;
+    }
+
+    a {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+
+    /* Re-enable per-element overrides used by the resume page. */
+    .resume-doc {
+      max-width: none !important;
+    }
+  }
+}
+
+@layer utilities {
+  .text-display {
+    font-size: var(--text-display);
+    line-height: var(--text-display-line);
+    letter-spacing: -0.025em;
+  }
+
+  .container-page {
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: clamp(1.25rem, 4vw, 3rem);
+  }
+
+  .grid-masonry {
+    column-gap: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .grid-masonry {
+      column-count: 2;
+    }
+  }
+  @media (min-width: 1024px) {
+    .grid-masonry {
+      column-count: 3;
+    }
+  }
+  .grid-masonry > * {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+  }
+}
