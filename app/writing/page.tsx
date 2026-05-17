@@ -23,14 +23,14 @@ export default function WritingIndexPage() {
 
   return (
     <section className="container-page pt-32">
-      <header className="mb-14 max-w-3xl">
+      <header className="mb-14 max-w-5xl">
         <p className="text-xs uppercase tracking-[0.22em] text-[var(--fg-muted)]">
           Writing
         </p>
         <h1 className="mt-3 text-4xl font-bold md:text-6xl">
           Essays
         </h1>
-        <p className="mt-6 text-lg text-[var(--fg-muted)]">
+        <p className="mt-6 text-pretty text-lg text-[var(--fg-muted)]">
           Long-form thinking on AI-native design, design systems, and the
           practice of designing in the real stack.
         </p>
