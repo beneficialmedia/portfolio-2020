@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Source_Sans_3, Jost } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import "./globals.css";
 import { profile } from "@/content/profile";
@@ -78,6 +80,8 @@ export default function RootLayout({
           <main id="main">{children}</main>
           <Footer />
         </ThemeProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
