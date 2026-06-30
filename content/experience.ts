@@ -5,7 +5,7 @@ export type ExperienceEntry = {
   to: string | "present";
   location?: string;
   summary: string;
-  /** Detailed bullets — rendered on /resume, omitted from /about timeline. */
+  /** Detailed bullets, rendered on /resume, omitted from /about timeline. */
   bullets?: string[];
   /** Slug into the case-study detail page if one exists. */
   workSlug?: string;
@@ -13,7 +13,7 @@ export type ExperienceEntry = {
    *  consecutive Aquent contract stints into a single visual entry on the
    *  timeline while preserving the granular detail on the résumé. */
   omitFromTimeline?: boolean;
-  /** Mark a row as a synthetic rollup — shown only on the /about timeline,
+  /** Mark a row as a synthetic rollup, shown only on the /about timeline,
    *  hidden from /resume so the résumé keeps its granular detail. */
   timelineOnly?: boolean;
 };
@@ -26,12 +26,13 @@ export const experience: ExperienceEntry[] = [
     to: "present",
     location: "Seattle, WA",
     summary:
-      "Lead product design for the Pulumi platform — shipped Insights from beta through GA. AI-native infrastructure tooling and agentic developer workflows for platform engineers, DevOps/SRE, and application developer personas.",
+      "Lead product design for the Pulumi platform. Shipped Insights from beta through GA. AI-native infrastructure tooling and agentic developer workflows for platform engineers, DevOps/SRE, and application developer personas.",
     bullets: [
-      "Led UX for Pulumi Insights from public preview through general availability — cloud asset search, governance, policy-on-discovered-resources, and AI-assisted natural-language queries across AWS, Azure, GCP, and hundreds of other providers.",
-      "Design AI-native product experiences including LLM-powered infrastructure tooling and agentic developer workflows — across Pulumi Cloud, Facet (the design system), ESC onboarding and approvals, VCS integrations, Policy as Code, and Pulumi Neo (our agentic AI platform engineer).",
-      "Bridge design and engineering by contributing production code alongside design deliverables.",
-      "Build and evolve design systems for complex, technical user audiences.",
+      "Led UX for Pulumi Insights from public preview through general availability: cloud asset search, governance, policy-on-discovered-resources, and AI-assisted natural-language queries across AWS, Azure, GCP, and hundreds of other providers.",
+      "Design AI-native product experiences including LLM-powered infrastructure tooling and agentic developer workflows across Pulumi Cloud, Facet (the design system), ESC onboarding and approvals, VCS integrations, Policy as Code, and Pulumi Neo (our agentic AI platform engineer).",
+      "Ship full-stack features across the Pulumi service: TypeScript/React and Web Components on the front end, Go services and REST/GraphQL APIs on the back end, including internal hackathon work delivered end-to-end from data model and API surface through to shipped UI.",
+      "Bridge design and engineering by contributing production code alongside design deliverables, in Figma for systems and specs, and in the real stack for prototypes that scale to ship.",
+      "Build and evolve design systems for complex, technical user audiences, with Figma libraries and tokens kept in sync with the Facet Web Components implementation.",
       "Drive research strategy for platform engineers, DevOps/SRE, and application developer personas.",
     ],
     workSlug: "pulumi",
@@ -43,10 +44,10 @@ export const experience: ExperienceEntry[] = [
     to: "2024-07",
     location: "Remote",
     summary:
-      "Founded and led Octuple — Eightfold's open-source design system — from zero to 10,000+ production implementation points in under eight months. Winner of the 2022 Eightfold Innovation Award.",
+      "Founded and led Octuple, Eightfold's open-source design system, from zero to 10,000+ production implementation points in under eight months. Winner of the 2022 Eightfold Innovation Award.",
     bullets: [
       "Founded and led core development of Octuple, Eightfold's open-source design system, growing implementation from zero to 10,000+ production touchpoints in under eight months.",
-      "Pushed for Octuple to become Eightfold's canonical component library, making the case across product, engineering, and design leadership over teams' existing tooling and switching costs — the foundation underneath the 10,000+ touchpoint adoption that followed. The consolidation would not have happened without it.",
+      "Pushed for Octuple to become Eightfold's canonical component library, making the case across product, engineering, and design leadership over teams' existing tooling and switching costs. That became the foundation underneath the 10,000+ touchpoint adoption that followed. The consolidation would not have happened without it.",
       "Managed a cross-functional v-team of engineers using agile/scrum methodology, driving design system adoption across Eightfold's AI-powered talent intelligence platform.",
       "Authored the UX migration strategy to consolidate local and third-party components into a unified design system, reducing fragmentation and improving velocity.",
       "Established holistic regression testing methodology to ensure quality and risk mitigation across design system releases.",
@@ -63,10 +64,10 @@ export const experience: ExperienceEntry[] = [
     summary:
       "Final of three roles at Microsoft Education. Owned UX engineering for Immersive Reader at scale and OneNote web accessibility.",
     bullets: [
-      "Designed the UX for AI-powered learning features built on Microsoft Cognitive Services — neural text-to-speech, neural machine translation, NLP for parts of speech and syllabification, speech-to-text — powering Immersive Reader, OneNote Live Captions, and Reading Assignments.",
-      "Supported Immersive Reader scaling from zero to 46M MAU across multiple platforms by creating a React prototype that scaled directly to production, and improving portability for use by any web experience.",
+      "Designed the UX for AI-powered learning features built on Microsoft Cognitive Services: neural text-to-speech, neural machine translation, NLP for parts of speech and syllabification, speech-to-text, powering Immersive Reader, OneNote Live Captions, and Reading Assignments.",
+      "Supported Immersive Reader scaling from zero to 46M MAU across multiple platforms by creating a React prototype that scaled directly to production, then helping shape the public Immersive Reader SDK (github.com/microsoft/immersive-reader-sdk), a full-stack embed surface that pairs a JavaScript/TypeScript client library with the Azure Cognitive Services token exchange so any web experience could embed the reader behind a few lines of code.",
       "Drove success within architecture of OneNote web application accessibility features, achieving SLA attainment of Level-C accessibility standards.",
-      "Led UX/UI prototyping for Reading Assignments and Immersive Reader, focusing on process, production, and engineering — contributing critical code to three winning (best overall, best in category) Microsoft Hackathon projects.",
+      "Led UX/UI prototyping for Reading Assignments and Immersive Reader, focusing on process, production, and engineering, contributing critical code to three winning (best overall, best in category) Microsoft Hackathon projects.",
       "Drove process and creation of quick-cadence executive presentations representing Microsoft Education product vision.",
       "Coordinated longitudinal research studies that culminated in extensible features originating from Microsoft Classroom into Microsoft Teams Assignments and OneNote class notebooks.",
     ],
@@ -81,9 +82,9 @@ export const experience: ExperienceEntry[] = [
     summary:
       "Transition role between UX design and engineering leadership for Microsoft Classroom and School Data Sync.",
     bullets: [
-      "Transitioned to leading engineering and front-end development for Microsoft Classroom and School Data Sync.",
+      "Transitioned to leading engineering and front-end development for Microsoft Classroom and School Data Sync: full-stack work across REST API contracts, OAuth flows, and the React/TypeScript surface above them.",
       "Managed on-call engineer rotation and live-site incident mitigation, including resolution tasks, telemetry implementation, and continuous-delivery-focused DevOps.",
-      "Innovated the Immersive Reader web application concept, taking the app from zero users to a fully formed reality.",
+      "Innovated the Immersive Reader web application concept, taking the app from zero users to a fully formed reality, including the early API surface that later became the public Immersive Reader SDK.",
     ],
   },
   {
@@ -103,7 +104,7 @@ export const experience: ExperienceEntry[] = [
       "Moved Microsoft apps to the cloud by authoring web applications, including the Immersive Reader.",
     ],
   },
-  // Synthetic rollup row — visible only on the /about timeline. The four
+  // Synthetic rollup row, visible only on the /about timeline. The four
   // granular Aquent rows below are marked `omitFromTimeline` so they still
   // appear on /resume but collapse to this single entry on the public timeline.
   {
@@ -140,7 +141,7 @@ export const experience: ExperienceEntry[] = [
     summary:
       "Among the early movers in shipping major HTML5-based brand advertising at scale. Pioneered Amazon's first HTML5-based ad takeover (Cover Girl × Hunger Games: Catching Fire) while the rest of the industry was still Flash.",
     bullets: [
-      "Pioneered Amazon's first major HTML5-based ad takeover with the Cover Girl × Hunger Games: Catching Fire campaign — an early move off Flash at a moment when the digital ad industry was still SWF-heavy and the IAB HTML5 ad specs were freshly published.",
+      "Pioneered Amazon's first major HTML5-based ad takeover with the Cover Girl × Hunger Games: Catching Fire campaign, an early move off Flash at a moment when the digital ad industry was still SWF-heavy and the IAB HTML5 ad specs were freshly published.",
       "Implemented innovative, IAB-compliant web-based ads as both visual designer and front-end developer, from conceptual design through production code.",
       "Designed ad campaigns from concept to delivery for clients including Pepsi, Procter & Gamble, Johnson & Johnson, Clorox, Kimberly Clark, and Beiersdorf.",
     ],
@@ -170,9 +171,9 @@ export const experience: ExperienceEntry[] = [
     to: "2012-10",
     location: "Kirkland, WA",
     summary:
-      "Owned the Microsoft Dynamics creative platform — a multi-channel design system across video, web, and presentations.",
+      "Owned the Microsoft Dynamics creative platform, a multi-channel design system across video, web, and presentations.",
     bullets: [
-      "Owned the Microsoft Dynamics creative platform, designing a multi-channel design system spanning video, web, and presentations — aligned to Windows brand standards.",
+      "Owned the Microsoft Dynamics creative platform, designing a multi-channel design system spanning video, web, and presentations aligned to Windows brand standards.",
       "Created the Microsoft Case Studies app for Windows Phone 7.5, providing a key channel for partner value demonstration.",
     ],
     workSlug: "metia",
@@ -186,7 +187,7 @@ export const experience: ExperienceEntry[] = [
     summary:
       "Authored UI variable scope for Windows 8 via Splash, contributing to the Metro design system. Built UI for Now Playing and About features.",
     bullets: [
-      "Defined the UI variable scope of Windows 8 by authoring types and interfaces in C++ to be interpreted by C# and XAML using Splash — supporting internal engineers and contributing to Windows Metro design success.",
+      "Defined the UI variable scope of Windows 8 by authoring types and interfaces in C++ to be interpreted by C# and XAML using Splash, supporting internal engineers and contributing to Windows Metro design success.",
       "Created complex Now Playing and About feature UIs, implementing transition animations throughout the product using a new pattern (forward and backward hide/show).",
       "Invented the BoundsType property, allowing developers to strip insets around blocks of type, giving designers high-quality grid control.",
     ],
@@ -194,12 +195,17 @@ export const experience: ExperienceEntry[] = [
   },
   {
     company: "Beneficialmedia",
-    role: "Designer",
+    role: "Designer · Creative Technologist",
     from: "2008-01",
     to: "present",
     location: "Elko, NV",
     summary:
-      "Independent design practice — the through-line across product design, creative technology, and AI-integrated workflows. Current focus: AI-native design tooling, automated design pipelines, and interaction design consulting.",
+      "Independent design practice. The through-line across product design, creative technology, and AI-integrated workflows. Current focus: AI-native design tooling, GenAI creative pipelines (image, video, audio), agentic and vibe-coded prototyping with Claude Code and Cursor, and interaction design consulting.",
+    bullets: [
+      "Run an AI-native design and engineering practice: Figma for systems work, the full Adobe ecosystem (Photoshop, Illustrator, After Effects, Premiere, InDesign) for editorial and motion, and GenAI tools (Midjourney, Firefly, ComfyUI, Runway, ElevenLabs) wired into repeatable, brand-conditioned pipelines.",
+      "Vibe-code production prototypes with Claude Code, Cursor, and Windsurf, keeping a tight loop between brief, concept, working software, and iteration.",
+      "Maintain a portfolio site (beneficialmedia.com) built and shipped in this same loop: Next.js, TypeScript, Tailwind, MDX, Vercel, designed in Figma, built with an agent in the editor, deployed continuously.",
+    ],
   },
   {
     company: "U.S. Marine Corps Recruiting",
@@ -207,7 +213,7 @@ export const experience: ExperienceEntry[] = [
     from: "1998-08",
     to: "2006-08",
     summary:
-      "Visual storyteller and documentarian embedded with Marine Corps operations. Produced imagery and video across information operations, civil affairs, and recruiting — where I learned that the best design communicates clearly under pressure, for audiences who can't afford to misunderstand.",
+      "Visual storyteller and documentarian embedded with Marine Corps operations. Produced imagery and video across information operations, civil affairs, and recruiting, where I learned that the best design communicates clearly under pressure, for audiences who can't afford to misunderstand.",
   },
 ];
 

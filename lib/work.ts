@@ -23,7 +23,7 @@ export type WorkFrontmatter = {
   logoBg?: string;
   /** Scale (0–1) applied to the logo inside the poster card. Defaults to 1.
    *  Use < 1 to shrink the rendered logo while the matching `logoBg` keeps the
-   *  apparent poster size consistent — reduces visible bitmap aliasing. */
+   *  apparent poster size consistent; reduces visible bitmap aliasing. */
   logoScale?: number;
   from: string;
   to: string;
@@ -57,5 +57,5 @@ export function formatDateRange(from: string, to: string): string {
     });
     return `${month} ${y}`;
   };
-  return `${fmt(from)} — ${fmt(to)}`;
+  return `${fmt(from)} – ${fmt(to)}`;
 }

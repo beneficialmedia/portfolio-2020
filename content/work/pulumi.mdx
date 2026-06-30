@@ -8,12 +8,12 @@ logoBg: "#ffffff"
 from: "2024-07"
 to: "present"
 accent: "#8b5cf6"
-summary: "Senior UX Designer at Pulumi. Lead design across Pulumi Cloud — the design system (Facet), Insights (shipped from beta through general availability), ESC onboarding and approvals, VCS integrations, Policy as Code, and Pulumi Neo, our agentic AI platform engineer. Every UI refresh since 2024."
+summary: "Senior UX Designer at Pulumi. Lead design across Pulumi Cloud: the design system (Facet), Insights (shipped from beta through general availability), ESC onboarding and approvals, VCS integrations, Policy as Code, and Pulumi Neo, our agentic AI platform engineer. Every UI refresh since 2024."
 galleries:
-  - title: Pulumi platform — selected surfaces
+  - title: Pulumi platform, selected surfaces
     description: "Selected product surfaces I've worked on at Pulumi. Imagery sourced from publicly available Pulumi product pages and blog posts."
     layout: "3"
-    caption: Pulumi Cloud — selected product surfaces
+    caption: Pulumi Cloud, selected product surfaces
     files:
       - https://www.pulumi.com/fingerprinted/images/product/neo/neo-hero.2c7487c6aadfc4ab36326891d8a558a80cb5744ff976202aa176e69ce02d47ab.svg
       - https://www.pulumi.com/fingerprinted/images/product/neo/neo-screenshot_hu_da9dcdd6d88fd44d.b4a10e9c7b2fbf253371058271353fc9ebac935f84a7b655e1fb10dee56f40bd.webp
@@ -25,57 +25,64 @@ galleries:
       - https://pulumi.com/fingerprinted/images/product/secrets-management/esc-screenshot-code_hu_f66d998984c1bcfb.d8acf27070b0187ff8e381d8691a24730c92781690af482ba992858f8c3c6d2a.webp
 ---
 
-Pulumi is the leading infrastructure-as-code platform — engineering teams use it to build, deploy, and manage cloud infrastructure across AWS, Azure, Google Cloud, and hundreds of other providers. I lead product design for Pulumi Cloud, working across a small, high-output team of product professionals and UX engineers. The work spans the design system underneath everything, the surfaces above it, and the AI-native primitives Pulumi has been shipping since 2024.
+Pulumi is the leading infrastructure-as-code platform: engineering teams use it to build, deploy, and manage cloud infrastructure across AWS, Azure, Google Cloud, and hundreds of other providers. I lead product design for Pulumi Cloud, working across a small, high-output team of product professionals and UX engineers. The work spans the design system underneath everything, the surfaces above it, and the AI-native primitives Pulumi has been shipping since 2024.
 
-### Facet — Pulumi's design system
+### Facet, Pulumi's design system
 
 Facet ([github.com/pulumi/facet](https://github.com/pulumi/facet)) is Pulumi's design system: a TypeScript + Web Components library published as `@pulumi/facet`. It's the foundation everything else in this case study sits on.
 
 - **Component-level work** on the system as it evolved from a younger library into a production-grade primitive set used across Pulumi Cloud, marketing, and docs.
-- **Token architecture** — colors, type, spacing, motion — tuned for a deeply technical UI that has to read at density without losing hierarchy.
+- **Token architecture** (colors, type, spacing, motion) tuned for a deeply technical UI that has to read at density without losing hierarchy.
 - **Web Components instead of React** to make the system framework-agnostic, so it lives equally inside the Cloud app, the marketing site, and embed surfaces.
 
 ### Pulumi Insights & Governance
 
-**Shipped from beta through general availability.** I led UX across the Insights surface from public preview through GA — the product that makes every cloud asset across AWS, Azure, GCP, and hundreds of other providers searchable, queryable, and governable, including resources created outside infrastructure-as-code. As the surface matured into "Insights & Governance," I owned the design through each milestone.
+**Shipped from beta through general availability.** I led UX across the Insights surface from public preview through GA, the product that makes every cloud asset across AWS, Azure, GCP, and hundreds of other providers searchable, queryable, and governable, including resources created outside infrastructure-as-code. As the surface matured into "Insights & Governance," I owned the design through each milestone.
 
-- **Resource search** with rich query syntax — filtering, grouping, column customization, and AI-assisted natural-language queries ("find all untagged resources in AWS").
-- **Discovery** of assets that were never declared in Pulumi — the long tail of click-ops and shadow infrastructure.
-- **Policy on discovered resources** — extending CrossGuard policy enforcement past IaC-managed infrastructure into the cloud as it actually exists.
-- **Shift-left governance** — surfacing compliance posture early enough in the workflow that fixing it isn't a separate project.
+- **Resource search** with rich query syntax: filtering, grouping, column customization, and AI-assisted natural-language queries ("find all untagged resources in AWS").
+- **Discovery** of assets that were never declared in Pulumi: the long tail of click-ops and shadow infrastructure.
+- **Policy on discovered resources**: extending CrossGuard policy enforcement past IaC-managed infrastructure into the cloud as it actually exists.
+- **Shift-left governance**: surfacing compliance posture early enough in the workflow that fixing it isn't a separate project.
 
-### Pulumi ESC — onboarding & approvals
+### Pulumi ESC, onboarding & approvals
 
 Pulumi ESC (Environments, Secrets, and Configuration) is centralized configuration management for infrastructure and applications. I owned design for two of its highest-touch surfaces in 2024–2025.
 
-- **Onboarding & OIDC** — a redesigned first-run experience that walks engineers through setting up Pulumi ESC as an OpenID Connect provider for AWS, Azure, GCP, and the rest. The flow has to make federated identity feel approachable on day one without hiding the complexity from senior platform engineers on day two.
-- **Approvals** — a structured review process for any proposed change to an ESC environment. Two interaction shapes: **update approvals** that gate changes to critical config and secrets before they apply, and **open approvals** that gate just-in-time access to an environment's credentials.
-- The work needed a workflow that felt native and lightweight, not bolted on — close enough to GitHub-style PR review to read instantly, different enough that it fit ESC's security model.
+- **Onboarding & OIDC**: a redesigned first-run experience that walks engineers through setting up Pulumi ESC as an OpenID Connect provider for AWS, Azure, GCP, and the rest. The flow has to make federated identity feel approachable on day one without hiding the complexity from senior platform engineers on day two.
+- **Approvals**: a structured review process for any proposed change to an ESC environment. Two interaction shapes: **update approvals** that gate changes to critical config and secrets before they apply, and **open approvals** that gate just-in-time access to an environment's credentials.
+- The work needed a workflow that felt native and lightweight, not bolted on, close enough to GitHub-style PR review to read instantly, different enough that it fit ESC's security model.
 
 ### VCS integrations
 
-Pulumi connects directly to GitHub, GitLab, Bitbucket, Azure DevOps, and custom Git/Mercurial servers — surfacing infrastructure previews on pull requests, push-to-deploy, ephemeral review stacks, and AI-powered change summaries.
+Pulumi connects directly to GitHub, GitLab, Bitbucket, Azure DevOps, and custom Git/Mercurial servers, surfacing infrastructure previews on pull requests, push-to-deploy, ephemeral review stacks, and AI-powered change summaries.
 
-- **Provider-specific affordances** — each VCS has a slightly different mental model for branches, merges, and approvals. The integrations have to honor each one without forking the IA underneath.
+- **Provider-specific affordances**: each VCS has a slightly different mental model for branches, merges, and approvals. The integrations have to honor each one without forking the IA underneath.
 - **Configuration UX** that scales from "I want previews on PRs" to "I want push-to-deploy to ephemeral review stacks gated by policy."
 
 ### Policy as Code
 
-CrossGuard is Pulumi's policy-as-code SDK — policies expressed in real programming languages, enforced at `pulumi preview` and `pulumi up`. I worked the UI surface for policies and policy violations.
+CrossGuard is Pulumi's policy-as-code SDK: policies expressed in real programming languages, enforced at `pulumi preview` and `pulumi up`. I worked the UI surface for policies and policy violations.
 
-- **Policy issues** — the design challenge is dense: a single deployment can produce many violations across many enforcement levels (advisory, mandatory), grouped by pack, project, stack, and resource. The UI has to make triage fast and the next action obvious.
-- **Cross-surface consistency** — policy violations show up in CLI output, PR comments, and the Cloud UI; the language and structure have to read as one thing.
+- **Policy issues**: the design challenge is dense. A single deployment can produce many violations across many enforcement levels (advisory, mandatory), grouped by pack, project, stack, and resource. The UI has to make triage fast and the next action obvious.
+- **Cross-surface consistency**: policy violations show up in CLI output, PR comments, and the Cloud UI. The language and structure have to read as one thing.
 
 ### Pulumi Neo
 
-Neo is Pulumi's agentic AI platform engineer, launched in public preview in September 2025. It writes Pulumi programs from natural-language prompts in TypeScript, Python, Go, and others — scans for misconfigurations and policy violations, executes infrastructure changes, and monitors outcomes — all under the team's existing RBAC and policy-as-code controls.
+Neo is Pulumi's agentic AI platform engineer, launched in public preview in September 2025. It writes Pulumi programs from natural-language prompts in TypeScript, Python, Go, and others, scans for misconfigurations and policy violations, executes infrastructure changes, and monitors outcomes, all under the team's existing RBAC and policy-as-code controls.
 
-- **Where it lives** — Neo works inside VS Code, Cursor, Claude Code, and Windsurf via MCP server, plus the Pulumi Cloud surface. The design problem cuts across "agent in your editor" and "agent in your dashboard" — those are very different interaction models that have to feel like one product.
-- **Trust gradients** — Neo's autonomy is configurable from "fully protected" (every action proposed for human approval) to "fully autonomous." The UI has to make where you are on that slider legible at a glance, especially during the moments when the agent is about to do something with blast radius.
-- **Real outcomes** — Werner Enterprises went from three-day infrastructure provisioning to four hours using Neo, while staying inside SOC 2.
+- **Where it lives**: Neo works inside VS Code, Cursor, Claude Code, and Windsurf via MCP server, plus the Pulumi Cloud surface. The design problem cuts across "agent in your editor" and "agent in your dashboard," two very different interaction models that have to feel like one product.
+- **Trust gradients**: Neo's autonomy is configurable from "fully protected" (every action proposed for human approval) to "fully autonomous." The UI has to make where you are on that slider legible at a glance, especially during the moments when the agent is about to do something with blast radius.
+- **Real outcomes**: Werner Enterprises went from three-day infrastructure provisioning to four hours using Neo, while staying inside SOC 2.
+
+### Full-stack contribution
+
+Beyond design deliverables, I ship full-stack features into the Pulumi service: **TypeScript and React / Web Components on the front end, Go services and REST/GraphQL APIs on the back end**, including internal hackathon work I've taken end-to-end from data model and API surface through to a shipped UI.
+
+- Working full-stack closes the loop between intent and outcome: the same person who decides what the interaction should feel like also touches the schema, the handler, and the component. Surprises surface during build, not during handoff.
+- It also keeps Facet honest. When the design system has to absorb a brand-new product surface under deadline, it helps to be one of the people writing the consuming code as well as one of the people maintaining the system.
 
 ### Through-line
 
-The connective tissue across all six surfaces is the same: **AI-native design is not a feature pinned on top of an existing UI — it's the substrate.** That shows up in the Insights query layer, the Neo autonomy controls, the policy violation triage, the ESC approval flow. The job is to make agentic capability feel safe, legible, and trustworthy for the platform engineers, SREs, and application developers who actually run production.
+The connective tissue across all six surfaces is the same: **AI-native design is not a feature pinned on top of an existing UI; it's the substrate.** That shows up in the Insights query layer, the Neo autonomy controls, the policy violation triage, the ESC approval flow. The job is to make agentic capability feel safe, legible, and trustworthy for the platform engineers, SREs, and application developers who actually run production.
 
 I write production code on this surface daily. It's how I prototype, how I ship, and how I keep the distance between concept and shipped product collapsed.

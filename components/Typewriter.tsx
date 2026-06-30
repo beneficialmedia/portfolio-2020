@@ -10,7 +10,7 @@ type Props = {
   className?: string;
 };
 
-// Lightweight typewriter — no dependency, respects prefers-reduced-motion.
+// Lightweight typewriter: no dependency, respects prefers-reduced-motion.
 export function Typewriter({
   phrases,
   typeMs = 55,

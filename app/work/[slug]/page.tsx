@@ -63,7 +63,7 @@ export default async function WorkDetailPage({
 
         {frontmatter.draft && (
           <p className="mt-6 inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-medium text-amber-600 dark:text-amber-300">
-            <span aria-hidden>•</span> Draft — claims marked{" "}
+            <span aria-hidden>•</span> Draft, claims marked{" "}
             <code className="rounded bg-amber-500/20 px-1 py-0.5">TODO(dylan)</code>{" "}
             pending verification
           </p>
@@ -88,14 +88,28 @@ export default async function WorkDetailPage({
           </div>
 
           {frontmatter.logo && (
-            <div className="relative hidden h-24 w-24 shrink-0 md:block">
-              <Image
-                src={frontmatter.logo}
-                alt={`${frontmatter.company} logo`}
-                fill
-                sizes="96px"
-                className="object-contain"
-              />
+            <div
+              className="hidden h-24 w-24 shrink-0 overflow-hidden rounded-[var(--radius-card)] p-[12px] md:block"
+              style={
+                frontmatter.logoBg ? { background: frontmatter.logoBg } : undefined
+              }
+            >
+              <div
+                className="relative h-full w-full"
+                style={
+                  frontmatter.logoScale
+                    ? { transform: `scale(${frontmatter.logoScale})` }
+                    : undefined
+                }
+              >
+                <Image
+                  src={frontmatter.logo}
+                  alt={`${frontmatter.company} logo`}
+                  fill
+                  sizes="72px"
+                  className="object-contain"
+                />
+              </div>
             </div>
           )}
         </header>

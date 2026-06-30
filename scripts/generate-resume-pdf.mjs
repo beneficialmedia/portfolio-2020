@@ -12,7 +12,7 @@
  *   npm run generate:resume
  *
  * Requires Puppeteer (devDependency). Puppeteer downloads its own Chromium on
- * install (~170 MB) — that's a one-time cost.
+ * install (~170 MB), a one-time cost.
  */
 
 import puppeteer from "puppeteer";
@@ -42,7 +42,7 @@ async function waitForServer(url, timeoutMs = 30_000) {
       const res = await fetch(url);
       if (res.status < 500) return;
     } catch {
-      // not ready yet — keep polling
+      // not ready yet; keep polling
     }
     await wait(500);
   }

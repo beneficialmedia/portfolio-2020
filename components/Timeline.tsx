@@ -20,7 +20,7 @@ export function Timeline() {
             className="absolute -left-[31px] top-2 h-3 w-3 rounded-full border-2 border-[var(--bg)] bg-[var(--section-accent)]"
           />
           <p className="text-xs uppercase tracking-[0.18em] text-[var(--fg-muted)]">
-            {fmt(entry.from)} — {fmt(entry.to)}
+            {fmt(entry.from)} – {fmt(entry.to)}
           </p>
           <h3 className="mt-1 text-xl font-bold">{entry.company}</h3>
           <p className="text-sm text-[var(--fg-muted)]">{entry.role}</p>

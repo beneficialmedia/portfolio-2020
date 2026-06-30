@@ -32,14 +32,14 @@ function fmt(s: string) {
 }
 
 function range(from: string, to: string) {
-  return `${fmt(from)} — ${fmt(to)}`;
+  return `${fmt(from)} – ${fmt(to)}`;
 }
 
 export default function ResumePage() {
   const hasPdf = pdfExists();
   return (
     <article className="resume-doc mx-auto max-w-[820px] px-6 pt-28 pb-24 print:p-0 print:pt-0 print:max-w-none">
-      {/* Web-only toolbar — hidden in print. */}
+      {/* Web-only toolbar; hidden in print. */}
       <div className="mb-10 flex items-center justify-between gap-4 print:hidden">
         <p className="text-xs uppercase tracking-[0.22em] text-[var(--fg-muted)]">
           Résumé
@@ -180,7 +180,7 @@ export default function ResumePage() {
                 </span>
               </p>
               <p className="text-xs uppercase tracking-[0.18em] text-[var(--fg-muted)] print:text-[8.5pt] print:tracking-normal print:normal-case print:text-black/70">
-                {ed.from} — {ed.to}
+                {ed.from} – {ed.to}
               </p>
             </li>
           ))}

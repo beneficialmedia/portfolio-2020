@@ -1,4 +1,4 @@
-# Portfolio Rebuild — Plan & Log
+# Portfolio Rebuild: Plan & Log
 
 A record of the plan, the decisions, and the deviations from the rebuild that
 replaced the 2020 Gatsby site with the current Next.js 16 portfolio. Kept so
@@ -9,11 +9,11 @@ re-deriving the reasoning.
 
 The site at `c:/source/portfolio-2020` was built in 2020 on Gatsby 2 + React 16
 via `@christiandavid/gatsby-theme-byfolio`. Both Gatsby 2 and React 16 are EOL.
-Content, IA, and tone reflected a 2020 "front-end developer" positioning —
-emoji-heavy typewriter intro, Flash/ActionScript skills, "20+ years" inflation,
-hardcoded `availableToHire: false`, WordPress blog link.
+Content, IA, and tone reflected a 2020 "front-end developer" positioning,
+with an emoji-heavy typewriter intro, Flash/ActionScript skills, "20+ years"
+inflation, hardcoded `availableToHire: false`, and a WordPress blog link.
 
-Goal: **a clearly evolutional rebuild** — same DNA, modern execution,
+Goal: **a clearly evolutional rebuild** with the same DNA, modern execution,
 repositioned for a senior+ product designer / UX engineer audience with an
 AI-native through-line. Build at the repo root, retire the Gatsby site.
 
@@ -23,7 +23,7 @@ AI-native through-line. Build at the repo root, retire the Gatsby site.
 - **Tailwind CSS v4** (CSS-first config, `@theme` blocks, no JS config file)
 - **MDX** via `@next/mdx` + `next-mdx-remote` for case studies + essays
 - **Motion 11** (Framer Motion) for interactions and route transitions
-- **next/font/google** — Source Sans 3 (display) + Jost (Futura-inspired body)
+- **next/font/google** with Source Sans 3 (display) + Jost (Futura-inspired body)
 - **next-themes** for dark mode (system-aware, persisted)
 - **Lucide React** for line icons
 - **Puppeteer** (devDependency) for résumé PDF generation
@@ -40,29 +40,29 @@ from the About page and footer:
 | Home (`/`)                   | Home (`/`)                                 | Typewriter rhythm kept, emoji-free copy                                                |
 | Experience                   | **Work** (`/work` + `/work/[slug]`)        | Renamed; case studies on dedicated detail routes                                       |
 | Skills                       | Merged into `/about`                       | Categorized chips, not a wall of logos                                                 |
-| —                            | **Writing** (`/writing` + `/writing/[slug]`)| New surface for essays                                                                 |
+| (none)                       | **Writing** (`/writing` + `/writing/[slug]`)| New surface for essays                                                                 |
 | About me                     | **About** (`/about`)                       | Bio + principles + skills + timeline + education                                       |
-| —                            | **Résumé** (`/resume`)                     | Print-optimized; linked from About + Footer; downloadable PDF artifact                 |
+| (none)                       | **Résumé** (`/resume`)                     | Print-optimized; linked from About + Footer; downloadable PDF artifact                 |
 | Blog (external WordPress)    | Removed                                    | Replaced by in-site `/writing`                                                         |
 
 Footer carries email, LinkedIn, GitHub, résumé link, copyright.
 
 ## Visual essence preserved (evolutional DNA)
 
-1. **SVG morphing liquid menu** — three-shape clip-path reveal in
+1. **SVG morphing liquid menu**: three-shape clip-path reveal in
    [components/menu/Menu.tsx](components/menu/Menu.tsx), replacing the 2020
    site's raw `requestAnimationFrame` Bézier morphing. Same essence, modern
    primitive.
-2. **Color-coded sections** — Home black, Work indigo, Writing teal, About red.
+2. **Color-coded sections**: Home black, Work indigo, Writing teal, About red.
    Driven by `--accent-*` CSS custom properties in [globals.css](app/globals.css)
    that flip between light and dark mode while preserving WCAG 4.5:1.
-3. **Hero typewriter** — kept the rhythm, dropped the emoji, reframed copy
+3. **Hero typewriter**: kept the rhythm, dropped the emoji, reframed copy
    around AI-native design.
-4. **Masonry-flavored work cards → image-rich detail pages** — preserved.
-5. **Source Sans typographic voice** — Source Sans Pro (Adobe, paid) →
+4. **Masonry-flavored work cards → image-rich detail pages**: preserved.
+5. **Source Sans typographic voice**: Source Sans Pro (Adobe, paid) →
    Source Sans 3 (Google Fonts, free). Body type swapped from Futura PT
    (paid) to Jost (Google Fonts Futura-inspired alternative).
-6. **Page transitions** — `template.tsx` AnimatePresence fade-up replaces the
+6. **Page transitions**: `template.tsx` AnimatePresence fade-up replaces the
    2020 `AniLink paintDrip` plugin.
 
 ## Build progression
@@ -96,20 +96,20 @@ corrections applied across content:
 
 - **Title**: Senior UX Designer (not Principal Product Designer)
 - **Pulumi start date**: July 2024, not 2021. Only ~2 years tenure.
-- **Eightfold (Feb 2022 – Jul 2024)** as Lead UX Engineer — entirely missing
+- **Eightfold (Feb 2022 – Jul 2024)** as Lead UX Engineer, entirely missing
   from initial draft. Founded **Octuple**, scaled to 10K+ touchpoints in
   8 months, won the 2022 Innovation Award.
 - **Immersive Reader scale**: 46M MAU (corrected from 20M)
-- **Microsoft Education assignments schema** — originated in 2014; major
+- **Microsoft Education assignments schema**: originated in 2014; major
   missing credit
 - **Fresh Paint** (Aquent contract, 2012–2013): sole UI dev, 1B MAU, invented
-  **BoundsType** property — added as its own case study
+  **BoundsType** property, added as its own case study
 - **Location**: Elko, Nevada (not Seattle)
-- **AI-native practice** — the core differentiator (LLM, agentic workflows,
-  Meta AI / LLAMA, Google Gemini) — moved to a top-of-page skill category
-- **Marine Corps Combat Motion Photographer (1998–2006)** — formative
+- **AI-native practice**, the core differentiator (LLM, agentic workflows,
+  Meta AI / LLAMA, Google Gemini), moved to a top-of-page skill category
+- **Marine Corps Combat Motion Photographer (1998–2006)**: formative
   non-design background, added as final timeline row
-- **Harvard Extension M.S. CSE (2018–2021)** — added to an Education section
+- **Harvard Extension M.S. CSE (2018–2021)**: added to an Education section
   on About
 
 After this pivot:
@@ -118,7 +118,7 @@ After this pivot:
 - Pulumi case study rewritten around real owned surfaces (Facet, Insights,
   ESC onboarding & approvals, VCS integrations, Policy as Code, Pulumi Neo)
 - Microsoft case study expanded with the **"Designing for AI, before AI was the
-  phrase"** framing — Microsoft Cognitive Services (neural TTS, neural MT, NLP,
+  phrase"** framing, casting Microsoft Cognitive Services (neural TTS, neural MT, NLP,
   speech) as the AI substrate underneath Immersive Reader and Live Captions
 
 ### 4. Brand logos + imagery
@@ -126,10 +126,10 @@ After this pivot:
 - User provided real PNG logos for Pulumi, Eightfold, Fresh Paint; placeholder
   SVG wordmarks deleted
 - `next.config.mjs` `remotePatterns` added for `pulumi.com`, `eightfoldai.github.io`,
-  `raw.githubusercontent.com`, `upload.wikimedia.org`, `blogs.windows.com` — to
+  `raw.githubusercontent.com`, `upload.wikimedia.org`, `blogs.windows.com`, to
   source public product imagery for galleries until self-hosted screenshots are
   added
-- Fresh Paint imagery: initially Wikipedia (66×66 icon, 421×236 screenshot —
+- Fresh Paint imagery: initially Wikipedia (66×66 icon, 421×236 screenshot,
   bot-shrunk for fair use); replaced with Microsoft Windows Experience Blog
   imagery (full quality artwork)
 - Fresh Paint logo treatment: `logoBg: "#F4B400"` + `logoScale: 0.9` to
@@ -159,7 +159,7 @@ were closed.
 - Higher-quality Fresh Paint imagery sourced
 - Essay written and `/writing` route added
 
-**Second pass remaining gaps** (items 4 and 5 — applied as the last big edit):
+**Second pass remaining gaps** (items 4 and 5, applied as the last big edit):
 - Consolidate Aquent rows on the /about timeline
 - Make the positioning call: pick Senior or Principal-track, align everything
 
@@ -178,17 +178,17 @@ were closed.
 
 ### 6. Real outcomes added after the second pass
 
-- **Pulumi Insights shipped beta → GA** — surfaced in the case study summary,
+- **Pulumi Insights shipped beta → GA**: surfaced in the case study summary,
   the Insights section, the timeline summary, and as the lead Pulumi résumé
   bullet
-- **Octuple as source of truth** — added a "The decision" section to the
+- **Octuple as source of truth**: added a "The decision" section to the
   Eightfold case study, framing the organizational advocacy and the
   attributable consequence ("it would not have happened without me pushing for
   it"). Mirrored as a dedicated résumé bullet.
 
 ### 7. Résumé PDF generator
 
-- `scripts/generate-resume-pdf.mjs` — spawns `next start` on port 3737,
+- `scripts/generate-resume-pdf.mjs` spawns `next start` on port 3737,
   Puppeteer renders `/resume` with `emulateMediaType("print")` + waits for
   `document.fonts.ready` so the PDF uses Source Sans 3 + Jost (not system
   fallbacks), writes Letter-format PDF with matching `@page` geometry to
@@ -206,7 +206,7 @@ were closed.
   root `node_modules/`)
 - Moved all `v2/*` contents to repo root
 - Critical `.gitignore` swap: the Gatsby `.gitignore` excluded `public/` (which
-  is Gatsby's build output) — under that rule, every image in
+  is Gatsby's build output). Under that rule, every image in
   `public/images/work/` plus `dylan-kilgore-resume.pdf` would have been
   excluded from the commit. Replaced with the Next.js-friendly version that
   tracks `public/` and excludes `.next/`.
@@ -217,7 +217,7 @@ were closed.
   dropped the "Old site" section, removed the "set root directory to v2/"
   note in the Deploy section
 - `v2/` directory left in place (held by a Node process at the time of move);
-  contains only `node_modules/` and `.next/`, both gitignored — safe to
+  contains only `node_modules/` and `.next/`, both gitignored, safe to
   delete when the locking process is gone
 
 ## Final state
@@ -248,22 +248,22 @@ were closed.
 
 Six case studies, reverse-chronological on `/work`:
 
-1. **Pulumi** — Senior UX Designer · Pulumi platform · Jul 2024–present
+1. **Pulumi**: Senior UX Designer · Pulumi platform · Jul 2024–present
    (Facet, Insights beta→GA, ESC onboarding & approvals, VCS, Policy, Neo)
-2. **Eightfold** — Lead UX Engineer · Octuple design system · Feb 2022–Jul 2024
+2. **Eightfold**: Lead UX Engineer · Octuple design system · Feb 2022–Jul 2024
    (Founded Octuple, pushed for it as source of truth, 10K+ touchpoints in
    8 months, 2022 Innovation Award)
-3. **Microsoft** — Senior UXD → Design Developer 2 → Design Engineer 2 ·
+3. **Microsoft**: Senior UXD → Design Developer 2 → Design Engineer 2 ·
    Microsoft Education · Aug 2014–Feb 2022 (Immersive Reader 46M MAU,
    assignments schema, OneNote a11y Level-C, Live Captions hackathon win,
    Cognitive Services AI substrate)
-4. **Fresh Paint** — Design Integrator · Prototyper · Windows 8 (via Aquent) ·
+4. **Fresh Paint**: Design Integrator · Prototyper · Windows 8 (via Aquent) ·
    Oct 2012–Sep 2013 (Sole UI dev, 1B MAU, BoundsType invention,
    XAML/C#/DirectX C++)
-5. **Amazon** — Visual Designer · Creative Technologist · Amazon Advertising
-   (via Aquent) · Oct 2013–Apr 2014 (Cover Girl × Hunger Games HTML5 takeover
-   — Amazon's Flash → HTML5 inflection point)
-6. **Metia** — Interactive Designer · Microsoft account · May 2011–Oct 2012
+5. **Amazon**: Visual Designer · Creative Technologist · Amazon Advertising
+   (via Aquent) · Oct 2013–Apr 2014 (Cover Girl × Hunger Games HTML5 takeover,
+   Amazon's Flash → HTML5 inflection point)
+6. **Metia**: Interactive Designer · Microsoft account · May 2011–Oct 2012
    (Microsoft Dynamics creative platform, Microsoft Case Studies app for
    Windows Phone 7.5)
 
@@ -316,25 +316,25 @@ Six case studies, reverse-chronological on `/work`:
 Honest list of things known to be open. Not blockers; just visible to anyone
 reading the code.
 
-- **Self-host the Pulumi marketing imagery** — the fingerprinted CDN URLs in
+- **Self-host the Pulumi marketing imagery**: the fingerprinted CDN URLs in
   [content/work/pulumi.mdx](content/work/pulumi.mdx) will 404 when Pulumi
   redeploys their site. Right-click → save to
   `public/images/work/pulumi/` → swap to relative paths.
-- **Self-host the Fresh Paint Windows-blog imagery** — same fragility.
-- **Replace Pulumi marketing imagery with screens you specifically designed**
-  — the single highest-leverage remaining change. Marketing imagery says "I
+- **Self-host the Fresh Paint Windows-blog imagery**: same fragility.
+- **Replace Pulumi marketing imagery with screens you specifically designed**,
+  the single highest-leverage remaining change. Marketing imagery says "I
   work on Pulumi"; personal screens say "I designed this."
-- **One process-led case study** — Immersive Reader is the candidate. Walk
+- **One process-led case study**: Immersive Reader is the candidate. Walk
   one decision end-to-end (option space, trade-off, outcome). ~400 extra
   words; lifts the case study to Principal-grade.
-- **More essays** — one is fine to start. Two or three over time strengthens
+- **More essays**: one is fine to start. Two or three over time strengthens
   the writing surface.
-- **LinkedIn tagline alignment** — update to match the site's "Product
+- **LinkedIn tagline alignment**: update to match the site's "Product
   designer & UX engineer · AI-native · Design systems · I write code."
-- **Two lockfiles** — `package-lock.json` AND `pnpm-lock.yaml` +
+- **Two lockfiles**: `package-lock.json` AND `pnpm-lock.yaml` +
   `pnpm-workspace.yaml` are both present. Pick one package manager and
   delete the other's artifacts.
-- **`v2/` directory** — locked by a Node process at the time of restructure.
+- **`v2/` directory**: locked by a Node process at the time of restructure.
   Contains only `node_modules/` and `.next/`, both gitignored. Delete after
   killing the locking process.
 

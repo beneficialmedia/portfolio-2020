@@ -21,7 +21,7 @@ export default function WorkIndexPage() {
           Selected case studies
         </h1>
         <p className="mt-6 text-lg text-[var(--fg-muted)]">
-          A reverse-chronological selection of the work I've shipped — from
+          A reverse-chronological selection of the work I've shipped, from
           early ad-tech experiments to accessibility-first products at scale.
         </p>
       </header>

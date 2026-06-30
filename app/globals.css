@@ -5,7 +5,7 @@
     "Segoe UI", Roboto, sans-serif;
   --font-display: var(--font-source-sans), ui-sans-serif, system-ui,
     -apple-system, "Segoe UI", Roboto, sans-serif;
-  /* Jost is a free, high-quality Futura-inspired Google Font — preserves the
+  /* Jost is a free, high-quality Futura-inspired Google Font; preserves the
      geometric body voice from the 2020 site (which used Futura PT, paid). */
   --font-body: var(--font-jost), "Futura PT", Futura, ui-sans-serif, system-ui,
     -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -25,12 +25,12 @@
     --fg-muted: #525252;
     --border: #e5e5e5;
 
-    /* Section accents — carried forward from the 2020 site DNA.
+    /* Section accents, carried forward from the 2020 site DNA.
        Each pair tested ≥ 4.5:1 against both backgrounds. */
     --accent-home: #0a0a0a;     /* on #fafaf9 → 19:1 */
     --accent-work: #3a3d98;     /* on #fafaf9 → 7.8:1 */
     --accent-writing: #0f766e;  /* on #fafaf9 → 5.4:1 (teal-700) */
-    --accent-about: #c01a30;    /* on #fafaf9 → 5.9:1 (was #d52d43, ~4.9:1 — bumped for safety) */
+    --accent-about: #c01a30;    /* on #fafaf9 → 5.9:1 (was #d52d43, ~4.9:1; bumped for safety) */
 
     /* Foreground paired with accent backgrounds. Light-mode accents are all
        dark enough that white text clears 4.5:1 against every one of them. */
@@ -46,7 +46,7 @@
     --fg-muted: #a3a3a3;
     --border: #262626;
 
-    /* Lighter accents for dark mode — all ≥ 4.5:1 against #0a0a0a. */
+    /* Lighter accents for dark mode, all ≥ 4.5:1 against #0a0a0a. */
     --accent-home: #fafafa;     /* on #0a0a0a → 19:1 */
     --accent-work: #818cf8;     /* on #0a0a0a → 7.1:1 (indigo-400) */
     --accent-writing: #5eead4;  /* on #0a0a0a → 13.4:1 (teal-300) */

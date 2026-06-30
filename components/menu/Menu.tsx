@@ -10,7 +10,7 @@ import { navLinks, profile } from "@/content/profile";
 
 const easeOut = [0.19, 1, 0.22, 1] as const;
 
-// Three layered liquid shapes — replaces the 2020 site's SVG-morphing menu
+// Three layered liquid shapes; replaces the 2020 site's SVG-morphing menu
 // with an equivalent clip-path reveal that breathes open from the trigger.
 const shapeLayers = [
   { color: "#413f46", opacity: 0.7, delay: 0 },
@@ -37,7 +37,7 @@ export function Menu() {
 
     // Lock on the html element, not body. With `scrollbar-gutter: stable`
     // applied to html in globals.css, the reserved gutter is preserved when
-    // html overflow becomes hidden — so there's no layout shift in either
+    // html overflow becomes hidden, so there's no layout shift in either
     // direction (scrollable page or not).
     const root = document.documentElement;
     const prevOverflow = root.style.overflow;

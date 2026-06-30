@@ -9,7 +9,7 @@ export function Education() {
           className="rounded-[var(--radius-card)] border border-[var(--border)] bg-[var(--bg-elevated)] p-6"
         >
           <p className="text-xs uppercase tracking-[0.18em] text-[var(--fg-muted)]">
-            {e.from} — {e.to}
+            {e.from} – {e.to}
           </p>
           <h3 className="mt-2 text-lg font-bold leading-tight">{e.school}</h3>
           <p className="mt-1 text-sm text-[var(--fg-muted)]">{e.credential}</p>

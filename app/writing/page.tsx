@@ -37,7 +37,7 @@ export default function WritingIndexPage() {
       </header>
 
       {essays.length === 0 ? (
-        <p className="text-[var(--fg-muted)]">No essays yet — check back soon.</p>
+        <p className="text-[var(--fg-muted)]">No essays yet. Check back soon.</p>
       ) : (
         <ul className="divide-y divide-[var(--border)] border-t border-[var(--border)]">
           {essays.map(({ frontmatter }) => (

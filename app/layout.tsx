@@ -27,21 +27,21 @@ const jost = Jost({
 export const metadata: Metadata = {
   metadataBase: new URL(profile.meta.siteUrl),
   title: {
-    default: `${profile.name} — ${profile.title}`,
-    template: `%s — ${profile.name}`,
+    default: `${profile.name} · ${profile.title}`,
+    template: `%s · ${profile.name}`,
   },
   description: profile.meta.description,
   keywords: profile.meta.keywords,
   openGraph: {
     type: "website",
-    title: `${profile.name} — ${profile.title}`,
+    title: `${profile.name} · ${profile.title}`,
     description: profile.meta.description,
     url: profile.meta.siteUrl,
     siteName: profile.name,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${profile.name} — ${profile.title}`,
+    title: `${profile.name} · ${profile.title}`,
     description: profile.meta.description,
     creator: profile.social.twitter ? `@${profile.social.twitter}` : undefined,
   },
